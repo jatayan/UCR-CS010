@@ -68,6 +68,10 @@ int main()
         {
             sentenceCount--;
         }
+        if ((sentenceEnd(input[i])) && (input[i + 1] != ' '))
+        {
+            sentenceCount--;
+        }
         i++;
     }
     if (sentenceEnd(input.back()) == false || (wordCount == syllableCount))
@@ -76,6 +80,10 @@ int main()
     }
     if (sentenceCount > 1)
     {
+        if (sentenceCount == wordCount)
+        {
+            sentenceCount++;
+        }
         sentenceCount--;
     }
     if (syllableCount > 1)
